@@ -1,0 +1,416 @@
+/*
+  Styles for the markup of the app
+*/
+
+html, body {
+  height:100%;
+  margin:0;
+  padding: 0px;
+}
+
+/*
+  Errase initial focus properties of the input fields
+*/
+textarea:focus, input:focus{
+    outline: none;
+}
+
+
+/*
+  Flex-box column align for elements within wrapper
+*/
+.wrapper {
+  height: 100%;
+  display: -moz-box;
+  display: -webkit-flexbox;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+/*
+  Add paddings to the header and chat containers
+*/
+.header, .chat_container {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/*
+  Styles for the header of the page start
+*/
+
+/*
+  Flex-box row align for elements within header
+*/
+.header {
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  order:1;
+
+	display: -webkit-box;
+ 	display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;  
+
+  -webkit-flex-flow: row wrap;
+ 	flex-flow: row wrap;
+
+	background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 0px 0px 0px 10px;
+  border-bottom: 2px solid white;
+}
+
+.header {
+  height: 40px;
+}
+
+.header > * {
+  font-family: 'Comfortaa', cursive;
+}
+
+/*
+  Application name styling
+*/
+/*
+  Align application name before login form
+*/
+.header > .app_name{
+  flex: 5 0px;
+  -webkit-flex: 5 0px;
+  order: 1;
+  padding-left: 10px;
+  color: #64F1BC;
+}
+
+.login_form {
+  order: 2;
+}
+
+/*
+  Styling focused login input field
+*/
+.login_form > #login_field:focus {
+  box-shadow: 0 0 5px #3CBC8C;
+  border: 1px solid #3CBC8C;
+}
+
+/*
+  Styling login and logout buttons
+*/
+.login_form > .login_button, .logout_button {
+  color: white;
+  background-color: #1FAB76;
+  border: 1px solid #07905C;
+  outline: none;
+}
+
+/*
+  Add to login and logout buttons styles on hover
+*/
+.login_form > .login_button:hover, .logout_button:hover {
+  background-color: #07905C;
+}
+
+/*
+  Login and message inputs styling
+*/
+.login_form > #login_field, .message_input_container > #chat_input_field {
+  padding: 5px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/*
+  Login and send message buttons styling
+*/
+.login_form > .login_button, .logout_button, .send_msg_button {
+  margin-left: 3px;
+  padding: 6px;
+  border-radius: 2px;
+  cursor: pointer;
+  min-width: 57px;
+  margin-right: 7px;
+}
+
+/*
+  Make the logout button be on the left side of the user's name
+*/
+.user_name {
+  float: left;
+  margin-right: 5px;
+  padding-top: 5px;
+  color: white;
+  margin-left: 10px;
+}
+
+/*
+  Styles for the header of the page end
+*/
+
+/*
+  Styles for chat container start
+*/
+
+/*
+  Make the container 8 times higher than header
+  Put it after the header
+*/
+.chat_container {
+  -moz-box-flex: 8;
+  -webkit-flex: 8;
+  -moz-flex: 8;
+  -ms-flex: 8;
+  flex: 8;
+  order:2;
+  background-color: rgba(67, 128, 182, 0.78);
+}
+
+
+/*
+  Chat name styling
+*/
+.chat_name {
+  margin-left: 10px;
+  margin-top: 20px;
+  font-family: 'Raleway-Semi-Bold', sans-serif;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/*
+  Message input container styling
+*/
+.message_input_container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; 
+  margin-top: 3px;  
+  padding-left: 10px;
+}
+
+/*
+  Make message input field's width 5 times more than send button
+  Align it before the send button
+*/
+#chat_input_field {
+  flex: 5 0px;
+  -webkit-flex: 5 0px;
+  order: 1;
+}
+
+.send_msg_button {
+  order: 2;
+  border: 1px solid #333333;
+}
+
+/*
+  Message container styling
+*/
+.message_container {
+	background-color: white;
+	margin-left: 1px;
+	margin-right: 2px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+/*
+  Styling focused message input field
+*/
+.message_input_container > #chat_input_field:focus {
+  box-shadow: 0 0 5px #1467B8;
+  border: 1px solid #1467B8;
+}
+
+/*
+  Styles for chat container end
+*/
+
+/*
+  Message styling start
+*/
+
+/*
+  Flex-box column align for elements within header
+*/
+.message {
+  width: 100%;
+  border-bottom: 2px solid #F2F2F2;
+  min-height: 50px;
+  display: -moz-box;
+  display: -webkit-flexbox;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+/*
+  Styling for receiver of the message
+*/
+.message > #user {
+  order: 1;
+  margin: 10px;
+  cursor: pointer;
+  font-family: 'Raleway', sans-serif
+}
+
+/*
+  Styling for the text of the message
+*/
+.message > #text_with_recipient {
+  order: 2;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  font-family: 'Raleway', sans-serif;
+}
+
+/*
+  Styling for recipient of the message
+*/
+#to_user {
+  color: #113C66;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/*
+  Message styling end
+*/
+
+
+/* 
+  Styling for screens with width up to 400px
+*/
+@media all and (max-width: 400px){
+  /*
+    Align app name and login form in different rows
+  */
+   .app_name, .login_form {
+    flex: 1 100%;
+    -webkit-flex: 1 100%;
+  }
+
+  /*
+    Pull the login form to the right side of the screen
+  */
+  .login_form {
+    text-align: right;
+    margin-top: 10px;
+  }
+
+  .header {
+    height: 55px;
+  }
+
+  .chat_name {
+    font-size: 17px;
+  }
+
+}
+
+/* 
+  Styling for screens with width up to 599px
+*/
+@media all and (max-width: 599px) {
+
+  .app_name {
+    font-size: 17px;
+  }
+
+  .login_form > #login_field{
+    width: 150px;
+  }
+
+  /*
+    Minimal height of message container
+  */
+  .message_container {
+    height: 330px;
+    margin: 10px;
+  }
+}
+
+/* 
+  Styling for screens with width with 600px and higher
+*/
+@media all and (min-width: 600px) {
+  /*
+    Make the width of the app name block 5 times greater than login form
+  */
+  .app_name {
+    font-size: 20px;
+    flex: 5 0px;
+    -webkit-flex: 5 0px;
+  }
+
+  /*
+    Align app name before login form
+  */
+  .app_name {
+    order: 1;
+  }
+
+  .login_form {
+    order: 2;
+  }
+
+  .login_form > #login_field{
+    width: 200px;
+  }
+
+  /*
+    Make chat container 6 times higher than header
+  */
+  .chat_container { 
+    flex: 6 0px; 
+    -webkit-flex: 6 0px;
+    padding-left: 10px;
+  } 
+
+  .message_container {
+    height: 220px;
+    margin: 10px;
+  }
+
+  .chat_name {
+    font-size: 19px;
+  }
+}
+
+/* 
+  Styling for screens with width 800px and higher
+*/
+@media all and (min-width: 800px) {
+  /*
+    Maximal height of message container
+  */
+  .message_container {
+   	height: 370px;
+  }
+
+  .app_name {
+    font-size: 22px;
+  }
+
+  .chat_name {
+    font-size: 20px;
+  }
+}
