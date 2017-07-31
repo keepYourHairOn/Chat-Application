@@ -12,4 +12,4 @@ Run the app with starting-up the server.
 ```
 npm start
 ```
-In your browser open [localhost:3000] (http://localhost:3000/)
+In your browser open [localhost:3000](http://localhost:3000/)
