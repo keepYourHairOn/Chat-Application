@@ -1,7 +1,7 @@
 # Chat-Application
 Real time messenger system.
 
-[node.js] (https://nodejs.org/en/) should be installed.
+[node.js](https://nodejs.org/en/) should be installed.
 
 ## Installing
 Install dependencies.
